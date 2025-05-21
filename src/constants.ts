@@ -2,6 +2,7 @@ import IconMail from "@/assets/icons/IconMail.svg";
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconBrandX from "@/assets/icons/IconBrandX.svg";
 import IconDouban from "@/assets/icons/IconDouban.svg";
+import IconBilibili from "@/assets/icons/IconBilibili.svg";
 import { SITE } from "@/config";
 
 export const SOCIALS = [
@@ -16,6 +17,12 @@ export const SOCIALS = [
     href: "https://www.douban.com/people/LoganQiu_1020/",
     linkTitle: ` ${SITE.title} on Douban`,
     icon: IconDouban,
+  },
+  {
+    name: "Bilibili",
+    href: "https://space.bilibili.com/439983453/",
+    linkTitle: ` ${SITE.title} on Bilibili`,
+    icon: IconBilibili,
   },
   {
     name: "X",
