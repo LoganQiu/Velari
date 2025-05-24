@@ -37,12 +37,3 @@ export const SOCIALS = [
     icon: IconMail,
   },
 ] as const;
-
-export const SHARE_LINKS = [
-  {
-    name: "X",
-    href: "https://x.com/intent/post?url=",
-    linkTitle: `Share this post on X`,
-    icon: IconBrandX,
-  },
-] as const;
