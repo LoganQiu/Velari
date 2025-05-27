@@ -2,10 +2,19 @@
 
 @layer base {
   .prose {
-    @apply prose-headings:!mb-3 prose-headings:!text-foreground prose-h3:italic prose-p:!text-foreground prose-a:!text-foreground prose-a:!decoration-dashed prose-a:underline-offset-8 hover:prose-a:text-accent prose-blockquote:!border-l-accent/50 prose-blockquote:opacity-80 prose-figcaption:!text-foreground prose-figcaption:opacity-70 prose-strong:!text-foreground prose-code:rounded prose-code:bg-muted/75 prose-code:p-1 prose-code:!text-foreground prose-code:before:!content-none prose-code:after:!content-none prose-ol:!text-foreground prose-ul:overflow-x-clip prose-ul:!text-foreground prose-li:marker:!text-accent prose-table:text-foreground prose-th:border prose-th:border-border prose-td:border prose-td:border-border prose-img:mx-auto prose-img:!my-2 prose-img:border-2 prose-img:border-border prose-hr:!border-border;
-  }
+    @apply prose-headings:!mb-3 prose-headings:!text-foreground prose-h3:italic;
+    @apply prose-p:!text-foreground;
+    @apply prose-blockquote:!border-l-foreground/50 prose-blockquote:opacity-80;
+    @apply prose-figcaption:!text-foreground prose-figcaption:opacity-70;
+    @apply prose-strong:!text-foreground;
+    @apply prose-code:rounded prose-code:bg-muted/75 prose-code:p-1 prose-code:!text-foreground prose-code:before:!content-none prose-code:after:!content-none;
+    @apply prose-ol:!text-foreground prose-ul:overflow-x-clip prose-ul:!text-foreground prose-li:marker:!text-accent;
+    @apply prose-table:text-foreground prose-th:border prose-th:border-border prose-td:border prose-td:border-border;
+    @apply prose-img:mx-auto prose-img:!my-2 prose-img:border-1 prose-img:border-border;
+    @apply prose-hr:!border-border;
+}
   .prose a {
-    @apply break-words hover:!text-accent;
+    @apply !text-foreground !decoration-dashed underline-offset-8 break-words hover:!text-accent;
   }
   .prose thead th:first-child,
   tbody td:first-child,

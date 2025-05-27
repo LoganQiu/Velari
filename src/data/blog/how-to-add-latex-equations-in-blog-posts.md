@@ -8,7 +8,11 @@ tags:
 description: Learn how to add LaTeX equations in Astro blog posts using Markdown, KaTeX, and remark/rehype plugins.
 ---
 
-This document demonstrates how to use LaTeX equations in your Markdown files for AstroPaper. LaTeX is a powerful typesetting system often used for mathematical and scientific documents.
+This document demonstrates how to use LaTeX equations in your Markdown files for AstroP<kbd>d</kbd>aper. LaTeX is a powerful typesetting system often used for mathematical and scientific documents.
+
+<kbd>⌘</kbd>
+
+
 
 <figure>
   <img
@@ -152,3 +156,18 @@ LaTeX provides a wide range of mathematical symbols:
 - Operators: `$\sum$`, `$\prod$`, `$\int$`, `$\partial$`, `$\nabla$`
 - Relations: `$\leq$`, `$\geq$`, `$\approx$`, `$\sim$`, `$\propto$`
 - Logical symbols: `$\forall$`, `$\exists$`, `$\neg$`, `$\wedge$`, `$\vee$`
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.

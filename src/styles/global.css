@@ -8,7 +8,7 @@ html[data-theme="light"] {
   --background: #fdfdfd;
   --foreground: #282728;
   --accent: #007bc2;
-  --muted: #e6e6e6;
+  --muted: #d3d3d3;
   --border: #004167;
 }
 
@@ -16,7 +16,7 @@ html[data-theme="dark"] {
   --background: #212737;
   --foreground: #eaedf3;
   --accent: #ff6b01;
-  --muted: #343f60bf;
+  --muted: #455278bf;
   --border: #ab4b08;
 }
 
@@ -61,4 +61,11 @@ html[data-theme="dark"] {
 
 .active-nav {
   @apply underline decoration-wavy decoration-2 underline-offset-4;
+}
+
+kbd {
+  @apply inline-block items-center mr-1 text-foreground font-mono border rounded-md;
+  @apply bg-white border-gray-200 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.08)];
+  @apply dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.1)];
+  @apply hover:relative hover:top-0.5 hover:left-0.5;
 }
