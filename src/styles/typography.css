@@ -3,7 +3,7 @@
 @layer base {
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-foreground prose-h3:italic;
-    @apply prose-p:!text-foreground;
+    @apply prose-p:text-foreground;
     @apply prose-figcaption:!text-foreground prose-figcaption:opacity-70;
     @apply prose-strong:!text-foreground;
     @apply prose-ol:!text-foreground prose-ul:overflow-x-clip prose-ul:!text-foreground prose-li:marker:!text-accent;

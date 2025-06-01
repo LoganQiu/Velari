@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./typography.css";
+@import "./alert.css";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
@@ -64,8 +65,8 @@ html[data-theme="dark"] {
 }
 
 kbd {
-  @apply inline-block items-center mr-1 text-foreground font-mono border rounded-md;
-  @apply bg-white border-gray-200 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.08)];
-  @apply dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-[2px_2px_0px_0px_rgba(255,255,255,0.1)];
+  @apply inline-block items-center mr-1 text-foreground font-mono border rounded-md leading-4;
+  @apply bg-white border-gray-300 shadow-[2px_2px_0px_0px_rgb(209,213,220)];
+  @apply dark:bg-black dark:border-gray-600 dark:shadow-[2px_2px_0px_0px_rgb(74,85,101)];
   @apply hover:relative hover:top-0.5 hover:left-0.5;
 }
