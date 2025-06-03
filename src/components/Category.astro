@@ -1,12 +1,12 @@
 ---
 export interface Props {
-  tag: string;
-  tagName: string;
+  category: string;
+  categoryName: string;
   count?: number;
   size?: "sm" | "lg";
 }
 
-const { tag, tagName, count, size = "sm" } = Astro.props;
+const { category, categoryName, count, size = "sm" } = Astro.props;
 ---
 
 <li
@@ -16,14 +16,14 @@ const { tag, tagName, count, size = "sm" } = Astro.props;
   ]}
 >
   <a
-    href={`/tags/${tag}/`}
-    transition:name={tag}
+    href={`/categories/${category}/`}
+    transition:name={category}
     class:list={[
       "relative pr-2 text-lg underline decoration-dashed group-hover:-top-0.5 group-hover:text-accent focus-visible:p-1",
       { "text-sm": size === "sm" },
     ]}
   >
-    <span># {tagName}</span>
+    <span>· {categoryName}</span>
     {
       typeof count === "number" && (
         <span class="ml-1 align-top text-sm text-foreground">({count})</span>

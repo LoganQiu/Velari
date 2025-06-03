@@ -4,6 +4,7 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Tag from "@/components/Tag.astro";
+import Category from "@/components/Category.astro";
 import Datetime from "@/components/Datetime.astro";
 import EditPost from "@/components/EditPost.astro";
 import BackButton from "@/components/BackButton.astro";
@@ -30,6 +31,7 @@ const {
   modDatetime,
   timezone,
   tags,
+  category,
   hideEditPost,
 } = post.data;
 
@@ -96,13 +98,31 @@ const nextPost =
     >
       {title}
     </h1>
-    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 w-full">
+    <div
+      class="flex w-full flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-4"
+    >
       <div class="flex items-center gap-2 sm:mr-auto">
-        <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" class="my-2" />
+        <Datetime
+          {pubDatetime}
+          {modDatetime}
+          {timezone}
+          size="lg"
+          class="my-2"
+        />
         <EditPost class="max-sm:hidden" {hideEditPost} {post} />
       </div>
-      <div class="w-full mt-2 sm:w-auto sm:ml-0 sm:mt-0 sm:flex sm:items-center sm:justify-end">
-        <ul class="flex flex-wrap gap-2 sm:justify-end sm:w-auto">
+      <div
+        class="mt-2 w-full sm:mt-0 sm:ml-0 sm:flex sm:w-auto sm:items-center sm:justify-end"
+      >
+        <ul class="flex flex-wrap gap-2 sm:w-auto sm:justify-end">
+          {
+            category && (
+              <Category
+                category={slugifyStr(category)}
+                categoryName={category}
+              />
+            )
+          }
           {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} />)}
         </ul>
       </div>
@@ -116,10 +136,9 @@ const nextPost =
     <div
       class="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-end sm:gap-4"
     >
-
       <button
         id="back-to-top"
-        class="fixed bottom-6 right-6 z-20 focus-outline py-1 px-4 whitespace-nowrap hover:opacity-75 rounded-full shadow-lg bg-background border border-solid border-currentColor"
+        class="focus-outline border-currentColor fixed right-6 bottom-6 z-20 rounded-full border border-solid bg-background px-4 py-1 whitespace-nowrap shadow-lg hover:opacity-75"
       >
         <IconChevronLeft class="inline-block rotate-90" />
       </button>
