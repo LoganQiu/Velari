@@ -14,7 +14,7 @@
     @apply my-0;
 }
 .prose .markdown-alert .markdown-alert-title {
-    @apply !mb-2 flex items-center font-sans font-normal leading-none;
+    @apply !mb-2 flex items-center font-sans font-medium leading-none;
 }
 .prose .markdown-alert svg.octicon {
     @apply mr-2;

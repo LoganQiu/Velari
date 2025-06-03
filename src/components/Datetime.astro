@@ -28,21 +28,21 @@ const {
 /* ========== Formatted Datetime ========== */
 const pubDate = dayjs(pubDatetime)
   .tz(postTimezone || SITE.timezone)
-  .format("D MMM, YYYY"); // e.g., '22 Mar, 2025'
+  .format("YYYY-MM-DD"); // e.g., '2024-11-03'
 const modDate =
   modDatetime && modDatetime > pubDatetime
     ? dayjs(modDatetime)
         .tz(postTimezone || SITE.timezone)
-        .format("D MMM, YYYY")
+        .format("YYYY-MM-DD")
     : null;
 ---
 
 <div class:list={["flex items-end space-x-2 opacity-80", className]}>
   <span class:list={["text-sm italic", { "sm:text-base": size === "lg" }]}>
-    <IconCalendar class="inline-block" />
+    <IconCalendar class="inline-block size-4" />
     <time datetime={dayjs(pubDatetime).toISOString()}>{pubDate}</time>
     {modDate && (
-      <IconEdit class="inline-block" />
+      <IconEdit class="inline-block size-4" />
       <span>
         {modDate}
       </span>
