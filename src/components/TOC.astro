@@ -52,7 +52,7 @@ if (isHeadingsArray) {
 
 <script>
   // 定义一个变量，用于存储当前页面的清理函数
-  let cleanup;
+  let cleanup: () => void;
 
   function initTOCHighlight() {
     // 运行之前，先执行上一个页面的清理函数（如果存在）
@@ -75,7 +75,7 @@ if (isHeadingsArray) {
     if (headings.length === 0 || tocLinksMap.size === 0) return;
 
     // 使用一个变量来跟踪当前活动的链接，避免不必要的DOM操作
-    let currentActiveLink = null;
+    let currentActiveLink: { classList: { remove: (arg0: string) => void; }; } | null = null;
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

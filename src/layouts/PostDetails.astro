@@ -38,6 +38,11 @@ const {
 
 const { Content, headings } = await render(post);
 
+// 只保留 depth > 1 的 heading（也就是 h2 及以后）
+const hasSubHeadings = Array.isArray(headings)
+  ? headings.some(h => h.depth > 1)
+  : false;
+
 let ogImageUrl: string | undefined;
 
 // Determine OG image source
@@ -86,6 +91,7 @@ const nextPost =
   <Header />
   <BackButton />
 
+  {hasSubHeadings && (
   <!-- 移动端折叠式 TOC -->
   <div class="toc-mobile xl:hidden mx-auto w-full max-w-4xl px-4 mb-6 mt-4">
     <details class="bg-background rounded-lg p-4 border">
@@ -109,7 +115,7 @@ const nextPost =
       </div>
     </div>
   </div>
-   
+  )}
   <main
     id="main-content"
     class:list={[
