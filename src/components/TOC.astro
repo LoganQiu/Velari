@@ -1,0 +1,146 @@
+---
+const { headings } = Astro.props;
+
+// 判断传入的是数组还是单个对象
+const isHeadingsArray = Array.isArray(headings);
+let toc = [];
+let currentHeading = null;
+
+if (isHeadingsArray) {
+  // 构建TOC结构
+  const parentHeadings = new Map();
+  headings.forEach((h) => {
+    const headingObj = { ...h, subheadings: [] };
+    parentHeadings.set(headingObj.depth, headingObj);
+    // Change 2 to 1 if your markdown includes your <h1>
+    if (headingObj.depth === 2) {
+      toc.push(headingObj);
+    } else {
+      parentHeadings.get(headingObj.depth - 1).subheadings.push(headingObj);
+    }
+  });
+} else {
+  // 单个heading对象
+  currentHeading = headings;
+}
+---
+
+{isHeadingsArray ? (
+  <!-- 根组件：渲染整个TOC -->
+  <nav class="toc">
+    <ul>
+      {toc.map((h) => (
+        <Astro.self headings={h} />
+      ))}
+    </ul>
+  </nav>
+) : (
+  <!-- 递归组件：渲染单个heading -->
+  <li>
+    <a href={'#' + currentHeading.slug}>
+      {currentHeading.text}
+    </a>
+    {currentHeading.subheadings.length > 0 && (
+      <ul class="ml-4">
+        {currentHeading.subheadings.map((subheading) => (
+          <Astro.self headings={subheading} />
+        ))}
+      </ul>
+    )}
+  </li>
+)}
+
+<script>
+  // 简化版TOC高亮脚本
+  function initTOCHighlight() {
+    const tocLinks = document.querySelectorAll('.toc a[href^="#"]');
+    const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'))
+      .filter(h => h.id);
+    
+    if (!headings.length || !tocLinks.length) return;
+
+    let currentActiveId = null;
+
+    function updateActiveHeading() {
+      let activeHeading = null;
+      
+      // 找到当前最合适的heading
+      for (let i = headings.length - 1; i >= 0; i--) {
+        const heading = headings[i];
+        const rect = heading.getBoundingClientRect();
+        
+        // 如果heading在视口上方100px以内，选择它
+        if (rect.top <= 100) {
+          activeHeading = heading;
+          break;
+        }
+      }
+      
+      // 如果没有找到，默认选择第一个
+      if (!activeHeading && headings.length > 0) {
+        activeHeading = headings[0];
+      }
+      
+      const newActiveId = activeHeading?.id;
+      
+      if (newActiveId !== currentActiveId) {
+        // 移除所有active状态
+        tocLinks.forEach(link => link.classList.remove('active'));
+        
+        // 添加新的active状态
+        if (newActiveId) {
+          const activeLinks = document.querySelectorAll(`.toc a[href="#${newActiveId}"]`);
+          activeLinks.forEach(link => link.classList.add('active'));
+        }
+        
+        currentActiveId = newActiveId;
+      }
+    }
+
+    // 滚动监听
+    let ticking = false;
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateActiveHeading();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    
+    window.addEventListener('scroll', onScroll, { passive: true });
+    
+    // 初始化
+    updateActiveHeading();
+    
+    // 清理函数
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  }
+  
+  // 页面加载完成后初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTOCHighlight);
+  } else {
+    initTOCHighlight();
+  }
+</script>
+<style>
+  .toc a {
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: inline-block;
+  }
+  
+  .toc a:hover {
+    color: var(--color-accent);
+  }
+  
+  /* 当前活跃的heading样式 */
+  .toc a.active {
+    background-color: var(--color-muted);
+  }
+</style>

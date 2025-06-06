@@ -15,8 +15,6 @@ This document demonstrates how to use LaTeX equations in your Markdown files for
 <kbd>⌘</kbd>
 
 
-## Table of contents
-
 ## Instructions
 
 In this section, you will find instructions on how to add support for LaTeX in your Markdown files for AstroPaper.
@@ -114,13 +112,13 @@ For more complex equations or when you want the equation to be displayed on its 
 
 The Gaussian integral:
 
-```bash
+```latex
 $$ \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi} $$
 ```
 
 The definition of the Riemann zeta function:
 
-```bash
+```latex
 $$ \zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} $$
 ```
 
@@ -131,7 +129,7 @@ $$
 
 Maxwell's equations in differential form:
 
-```bash
+```latex
 $$
 \begin{aligned}
 \nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\

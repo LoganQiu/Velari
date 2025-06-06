@@ -1,4 +1,5 @@
 import IconMail from "@/assets/icons/IconMail.svg";
+import Bangumi from "@/assets/icons/Bangumi.svg";
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconBrandX from "@/assets/icons/IconBrandX.svg";
 import IconDouban from "@/assets/icons/IconDouban.svg";
@@ -17,6 +18,12 @@ export const SOCIALS = [
     href: "https://www.douban.com/people/LoganQiu_1020/",
     linkTitle: ` ${SITE.title} on Douban`,
     icon: IconDouban,
+  },
+  {
+    name: "Bangumi",
+    href: "https://bgm.tv/user/797972",
+    linkTitle: ` ${SITE.title} on Bangumi`,
+    icon: Bangumi,
   },
   {
     name: "Bilibili",
