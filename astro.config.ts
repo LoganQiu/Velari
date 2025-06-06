@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
+import partytown from "@astrojs/partytown";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import remarkAlert from "remark-github-blockquote-alert";
@@ -9,11 +10,9 @@ import { SITE } from "./src/config";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
-  integrations: [
-    sitemap({
-      filter: page => SITE.showArchives || !page.endsWith("/archives"),
-    }),
-  ],
+  integrations: [sitemap({
+    filter: page => SITE.showArchives || !page.endsWith("/archives"),
+  }), partytown({ config: { forward: ['dataLayer.push', 'gtag'] } })],
   markdown: {
     remarkPlugins: [remarkMath, remarkAlert],
     rehypePlugins: [rehypeKatex],
