@@ -3,7 +3,7 @@ const { headings } = Astro.props;
 
 // 判断传入的是数组还是单个对象
 const isHeadingsArray = Array.isArray(headings);
-let toc = [];
+let toc: any[] = [];
 let currentHeading = null;
 
 if (isHeadingsArray) {
@@ -42,7 +42,7 @@ if (isHeadingsArray) {
     </a>
     {currentHeading.subheadings.length > 0 && (
       <ul class="ml-4">
-        {currentHeading.subheadings.map((subheading) => (
+        {currentHeading.subheadings.map((subheading: any) => (
           <Astro.self headings={subheading} />
         ))}
       </ul>
@@ -51,82 +51,69 @@ if (isHeadingsArray) {
 )}
 
 <script>
-  // 简化版TOC高亮脚本
+  // 定义一个变量，用于存储当前页面的清理函数
+  let cleanup;
+
   function initTOCHighlight() {
+    // 运行之前，先执行上一个页面的清理函数（如果存在）
+    if (cleanup) {
+      cleanup();
+    }
+
     const tocLinks = document.querySelectorAll('.toc a[href^="#"]');
+    const tocLinksMap = new Map();
+    tocLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href) {
+        tocLinksMap.set(href.slice(1), link);
+      }
+    });
+
     const headings = Array.from(document.querySelectorAll('h2, h3, h4, h5, h6'))
-      .filter(h => h.id);
-    
-    if (!headings.length || !tocLinks.length) return;
+      .filter(h => h.id && tocLinksMap.has(h.id));
 
-    let currentActiveId = null;
+    if (headings.length === 0 || tocLinksMap.size === 0) return;
 
-    function updateActiveHeading() {
-      let activeHeading = null;
-      
-      // 找到当前最合适的heading
-      for (let i = headings.length - 1; i >= 0; i--) {
-        const heading = headings[i];
-        const rect = heading.getBoundingClientRect();
-        
-        // 如果heading在视口上方100px以内，选择它
-        if (rect.top <= 100) {
-          activeHeading = heading;
-          break;
+    // 使用一个变量来跟踪当前活动的链接，避免不必要的DOM操作
+    let currentActiveLink = null;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.id;
+        const link = tocLinksMap.get(id);
+
+        if (entry.isIntersecting && entry.intersectionRatio >= 1) {
+          // 移除旧的 active 类
+          if (currentActiveLink) {
+            currentActiveLink.classList.remove('active');
+          }
+          // 添加新的 active 类
+          link?.classList.add('active');
+          currentActiveLink = link;
         }
-      }
-      
-      // 如果没有找到，默认选择第一个
-      if (!activeHeading && headings.length > 0) {
-        activeHeading = headings[0];
-      }
-      
-      const newActiveId = activeHeading?.id;
-      
-      if (newActiveId !== currentActiveId) {
-        // 移除所有active状态
-        tocLinks.forEach(link => link.classList.remove('active'));
-        
-        // 添加新的active状态
-        if (newActiveId) {
-          const activeLinks = document.querySelectorAll(`.toc a[href="#${newActiveId}"]`);
-          activeLinks.forEach(link => link.classList.add('active'));
-        }
-        
-        currentActiveId = newActiveId;
-      }
-    }
+      });
+    }, {
+      rootMargin: '-100px 0px -50% 0px',
+      threshold: 1.0,
+    });
 
-    // 滚动监听
-    let ticking = false;
-    function onScroll() {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          updateActiveHeading();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }
-    
-    window.addEventListener('scroll', onScroll, { passive: true });
-    
-    // 初始化
-    updateActiveHeading();
-    
-    // 清理函数
-    return () => {
-      window.removeEventListener('scroll', onScroll);
+    headings.forEach(heading => observer.observe(heading));
+
+    // 将当前页面的清理逻辑赋值给 cleanup 变量
+    // 当下一个页面加载时，这个函数将被调用
+    cleanup = () => {
+      console.log('Cleaning up observers for the previous page.');
+      headings.forEach(heading => observer.unobserve(heading));
+      // 或者更彻底地断开连接
+      // observer.disconnect();
     };
   }
-  
-  // 页面加载完成后初始化
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTOCHighlight);
-  } else {
-    initTOCHighlight();
-  }
+
+  // 关键改动：监听 astro:page-load 事件
+  // 这会确保在每次页面导航（包括首次加载）后都运行初始化函数
+  document.addEventListener('astro:page-load', initTOCHighlight, { once: false });
 </script>
+
 <style>
   .toc a {
     padding: 2px 4px;
