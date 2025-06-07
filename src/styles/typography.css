@@ -2,20 +2,21 @@
 
 @layer base {
   .prose {
-    @apply prose-headings:!mb-3 prose-headings:!text-foreground prose-h3:italic;
+    @apply prose-headings:!mb-3 prose-headings:!text-foreground prose-headings:!font-song prose-h3:italic;
     @apply prose-p:text-foreground;
-    @apply prose-figcaption:!text-foreground prose-figcaption:opacity-70;
-    @apply prose-strong:!text-foreground;
+    @apply prose-strong:!text-accent;
     @apply prose-ol:!text-foreground prose-ul:overflow-x-clip prose-ul:!text-foreground prose-li:marker:!text-accent;
     @apply prose-table:text-foreground prose-th:border prose-th:border-border prose-td:border prose-td:border-border;
-    @apply prose-img:mx-auto prose-img:!my-2 prose-img:border-1 prose-img:border-border;
     @apply prose-hr:!border-border;
 }
+  .prose img {
+    @apply !w-full max-w-3xl mx-auto !my-2 border-1 border-border;
+  }
   .prose a {
     @apply !text-foreground !decoration-dashed underline-offset-8 break-words hover:!text-accent;
   }
   .prose blockquote {
-    @apply !border-l-foreground/50 break-words;
+    @apply !border-l-foreground/50 break-words font-kaiti !not-italic text-lg;
     quotes: none !important;
   }
   .prose thead th:first-child,
@@ -23,17 +24,11 @@
   tfoot td:first-child {
     padding-inline-start: 0.5714286em !important;
   }
-  .prose h2#table-of-contents {
-    @apply mb-2;
-  }
   .prose details {
     @apply inline-block cursor-pointer text-foreground select-none;
   }
   .prose summary {
     @apply focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-accent focus-visible:outline-dashed;
-  }
-  .prose h2#table-of-contents + p {
-    @apply hidden;
   }
   /* Katex text color */
   .prose .katex-display {
@@ -44,7 +39,7 @@
     @apply border border-border;
   }
   .prose code {
-    @apply rounded bg-muted/75 p-1 !text-foreground break-words;
+    @apply rounded bg-muted/50 p-1 !text-foreground break-words;
   }
   .prose code::before,
   .prose code::after {

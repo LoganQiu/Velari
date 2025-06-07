@@ -4,7 +4,7 @@ slug: hello-markdown
 pubDatetime: 2025-02-14
 category: Misc 杂项
 tags:
-  - hugo
+  - Astro
 description: 这篇文章展示了本主题的所有功能
 ---
 
@@ -16,7 +16,7 @@ description: 这篇文章展示了本主题的所有功能
 
 A paragraph (with a footnote):
 
-**Lorem ipsum** dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+**Lorem ipsum** dolor sit amet, con<sub>s</sub>ectetur adipi<sup>s</sup>cing elit, sed do eiusmod
 tempor incididunt ut labore et dolore *magna aliqua*. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Aute ~~irure~~ dolor in reprehenderit in voluptate velit esse cillum
@@ -39,11 +39,11 @@ List:
 
 A blockquote (a gray bar at the left and lightgray background):
 
-> Quisque mattis volutpat lorem vitae feugiat. Praesent porta est quis porta
+> *Quisque mattis volutp*at lorem vitae feugiat. Praesent porta est quis porta
 > imperdiet. Aenean porta, mi non cursus volutpat, mi est mollis libero, id
 > suscipit orci urna a augue. In fringilla euismod lacus, vitae tristique massa
-> ultricies vitae. Mauris accumsan ligula tristique, viverra nulla sed, porta
-> sapien. Vestibulum facilisis nec nisl blandit convallis. Maecenas venenatis
+> ultricies vitae. Mauris acc*um*san ligula tristique, viverra nulla sed, porta
+> sapien. Vestibulum fac**ili**sis nec nisl验证楷体 blandit convallis. Maecenas venenatis
 > porta malesuada. Ut ac erat tortor. Orci varius natoque penatibus et magnis
 > dis parturient montes, nascetur ridiculus mus. Nulla sodales quam sit amet
 > tincidunt egestas. In et turpis at orci vestibulum ullamcorper. Aliquam sed
@@ -79,11 +79,18 @@ A full-width table:
 |          5.0 |         3.6 |          1.4 |         0.2 | setosa  | aaa |
 |          5.4 |         3.9 |          1.7 |         0.4 | setosa  | aaa |
 
+
+| 名称        | 描述       | 数量 |
+|:-----------|:----------:|-----:|
+| Item A     | 这是 Item A |   10 |
+| Item B     | 这是 Item B |    5 |
+
+
 An image:
 
-<div align=center><img src="/src/assets/images/11.jpeg" width=400px alt="hello"></div>
+![Happy](../../assets/images/22.png)
 
-![Happy Elmo](/src/assets/images/11.jpeg)
+![Happy Elmo](../../assets/images/11.jpeg)
 
 Display math (render by MathJax):
 
