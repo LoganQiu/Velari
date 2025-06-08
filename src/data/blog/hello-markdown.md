@@ -3,6 +3,7 @@ title: "A Plain Markdown Post"
 slug: hello-markdown
 pubDatetime: 2025-02-14
 category: Misc 杂项
+draft: true
 tags:
   - astro
 description: "这篇文章展示了本主题的所有功能"
