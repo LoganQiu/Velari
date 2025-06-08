@@ -2,7 +2,7 @@
 title: "Hugo 中英文混排字数统计（未解决）"
 slug: hugo-wordcount
 date: 2025-03-08
-categories: Tech 技术
+category: Tech 技术
 tags:
   - hugo
 description: "关于 Hugo 字数统计在中英文混排时的问题，且尚未解决"
