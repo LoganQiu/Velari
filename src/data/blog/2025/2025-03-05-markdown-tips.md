@@ -1,7 +1,7 @@
 ---
 title: "一些 Markdown 技巧实践"
 slug: markdown-tips
-date: 2025-03-05
+pubDatetime: 2025-03-05
 category: Tech 技术
 tags:
   - markdown

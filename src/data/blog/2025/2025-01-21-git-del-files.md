@@ -1,7 +1,7 @@
 ---
 title: "Git 删除已进入版本控制文件"
 slug: git-del-files
-date: 2025-01-21
+pubDatetime: 2025-01-21
 category: Tech 技术
 tags:
   - git
