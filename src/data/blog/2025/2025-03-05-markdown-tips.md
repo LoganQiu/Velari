@@ -2,6 +2,7 @@
 title: "一些 Markdown 技巧实践"
 slug: markdown-tips
 pubDatetime: 2025-03-05
+modDatetime: 2025-06-05
 category: Tech 技术
 tags:
   - markdown
@@ -20,6 +21,7 @@ description: "一些 Markdown 最佳实践和不常用的小技巧"
 
 > [!tip]
 > Hugo 自带 Markdown 解析器 Goldmark 的 typographer 扩展可以自动将这些短横解析：-，--（`&ndash;`），---（`&mdash;`）。
+> 已使用 Astro 重构博客，目前只使用前两种。
 
 使用方法就不赘述了，可以看 [这篇文章](https://www.punctuationmatters.com/en-dash-em-dash-hyphen/) 讲解，或者看 [知乎回答](https://www.zhihu.com/question/20332423/answer/15367631)。
 
@@ -84,7 +86,7 @@ HTML 常用符号：
 
 ## 其他
 
-本博客使用 Hugo 生成，还支持 PHP Markdown 的定义列表（definition list）扩展：
+~~本博客使用 Hugo 生成，还支持 PHP Markdown 的定义列表（definition list）扩展：~~
 
 ```markdown
 Apple
@@ -93,4 +95,6 @@ Apple
 Apple
 :   A kind of red fruit
 
-但由于此语法并不通用，我竭力避免使用。
+~~但由于此语法并不通用，我竭力避免使用。~~
+
+博客已使用 Astro 重写，无视此条。

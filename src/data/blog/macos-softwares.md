@@ -80,7 +80,9 @@ Further help:
   稍微展开来说，免费版的 Raycast 就已经包含了剪贴板历史记录管理（支持剪贴板图片 OCR）、窗口布局管理（平替 Rectangle）、应用卸载（划重点）等功能，再搭配丰富的插件市场已经是顶级全能手了。
 
 - [NetNewsWire](https://github.com/Ranchero-Software/NetNewsWire)（2024/09/29 添加）  
-  开源 RSS 阅读器，或者去外区商店下载更优雅的但买断制 Reeder Classic. 或者订阅制 Reeder.（这俩是同一个开发者，后者是新应用可以支持播客与视频的跟踪）。
+  开源 RSS 阅读器，或者去外区商店下载更优雅的但买断制 Reeder Classic. 或者订阅制 Reeder.（这俩是同一个开发者，后者是新应用可以支持播客与视频的跟踪）。  
+  [Folo](https://github.com/RSSNext/Folo)（2025/06/06 添加）  
+  最新最强的 RSS 订阅软件，由 RSSHub 作者 [DIYgod](https://github.com/diygod) 带头开发，推荐尝试。
 
 - [Little Snitch](https://www.obdev.at/products/littlesnitch/index.html)/[LuLu](https://github.com/objective-see/LuLu)  
   由于 macOS 自带的防火墙只能防御入站流量（inbound traffic），无法审查出站流量（outbound traffic），如果有软件向服务器上传隐私数据就无法阻止，此时需要第三方防火墙。Little Snitch 支持大版本买断，功能丰富，界面简洁优雅；LuLu 开源免费，基础功能齐全。  
