@@ -1,13 +1,13 @@
 ---
-title: 程序员须知
+title: "程序员须知"
 slug: programmers-notes
 pubDatetime: 2024-12-11
 category: Misc 杂项
 featured: true
-description: 此处存档一些网络上看到的对程序员有启发或者我感到有意思的文章与博客。
+description: "此处存档一些网络上看到的对程序员有启发或者我感到有意思的文章与博客。"
 ---
 
-文章
+**文章**
 
 [Side Project 指南](https://sideproject.guide/) 即对施展拳脚开展副业前的指导
 
@@ -19,7 +19,7 @@ description: 此处存档一些网络上看到的对程序员有启发或者我�
 
 [计算机教育中缺失的一课](https://missing.csail.mit.edu/) 即学习 CS 的基础工具
 
-博客
+**博客**
 
 [GFW 技术评论](https://gfwrev.blogspot.com/)（古早博客，提出西厢计划）
 

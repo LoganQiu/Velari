@@ -1,5 +1,5 @@
 ---
-title: macOS 软件
+title: "macOS 软件"
 slug: macos-softwares
 pubDatetime: 2024-08-16
 modDatetime: 2025-06-06
@@ -7,7 +7,7 @@ category: Tools 工具
 tags:
   - macOS
 featured: true
-description: macOS 的软件管理策略以及好用的软件推荐
+description: "macOS 的软件管理策略以及好用的软件推荐"
 ---
 
 > [!important]
@@ -100,7 +100,8 @@ Further help:
 
 ## 小工具
 
-- [Ice](https://github.com/jordanbaird/Ice)（Ice 许久不更新有许多 issues，已于 2025/06/02 购入 Barbee）  
+- [Ice](https://github.com/jordanbaird/Ice)  
+  （Ice 许久不更新有许多 issues，已于 2025/06/02 购入 Barbee）  
   菜单栏空间非常紧张，因此迫切需要优秀的管理软件来设置隐藏某些图标。Ice 上手快速方便，还有开源项目 [Dozer](https://github.com/Mortennn/Dozer)，[Hidden Bar](https://github.com/dwarvesf/hidden) 可以尝试，不过已经停更数年之久并不推荐。在 Mac App Store 中还可以搜索 Barbee 和 iBar 进行尝试。至于 [Bartender](https://www.macbartender.com/)？当然是极优秀的软件，可是一方面它悄无声息被一家未知开发者公司收购缺少透明度，一方面又是如此昂贵的大版本买断制，取舍自断了。
 - [SketchyBar](https://github.com/FelixKratz/SketchyBar)  
   SketchyBar 可以彻底自定义菜单栏，包括但不限于菜单栏的形状，添加个性化图标，修改图标间隙大小等等。

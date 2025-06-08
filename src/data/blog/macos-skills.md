@@ -1,5 +1,5 @@
 ---
-title: macOS 特殊技巧
+title: "macOS 特殊技巧"
 slug: macos-skills
 pubDatetime: 2024-08-16
 modDatetime: 2025-01-31
@@ -7,7 +7,7 @@ category: Tech 技术
 tags:
   - macOS
 featured: true
-description: macOS 的各种隐藏功能指南以及针对一些反人类设计的奇技淫巧
+description: "macOS 的各种隐藏功能指南以及针对一些反人类设计的奇技淫巧"
 ---
 
 ## 允许安装并运行任何来源的应用

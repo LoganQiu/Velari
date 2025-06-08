@@ -1,5 +1,5 @@
 ---
-title: Windows 软件
+title: "Windows 软件"
 slug: windows-softwares
 pubDatetime: 2024-01-03
 modDatetime: 2024-10-08
@@ -7,7 +7,7 @@ category: Tools 工具
 tags:
   - windows
 featured: true
-description: Windows 的软件管理策略以及好用的软件推荐
+description: "Windows 的软件管理策略以及好用的软件推荐"
 ---
 
 > [!important]

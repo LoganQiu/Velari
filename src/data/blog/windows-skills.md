@@ -1,5 +1,5 @@
 ---
-title: Windows 特殊技巧
+title: "Windows 特殊技巧"
 slug: windows-skills
 pubDatetime: 2024-01-05
 modDatetime: 2025-01-31
@@ -7,7 +7,7 @@ category: Tech 技术
 tags:
   - windows
 featured: true
-description: Windows 的各种隐藏功能指南以及针对一些反人类设计的奇技淫巧
+description: "Windows 的各种隐藏功能指南以及针对一些反人类设计的奇技淫巧"
 ---
 
 ## 系统字体更改

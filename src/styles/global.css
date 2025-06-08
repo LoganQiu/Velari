@@ -8,9 +8,9 @@
 html[data-theme="light"] {
   --background: #fdfdfd;
   --foreground: #282728;
-  --accent: #007bc2;
+  --accent: #2e00d2;
   --muted: #d3d3d3;
-  --border: #004167;
+  --border: #1a0079;
 }
 
 html[data-theme="dark"] {
