@@ -14,7 +14,7 @@ description: "介绍如何对一些程序员常用工具进行代理配置而不
 
 ## 配置 Shell 代理
 
-根据不同 Shell 在对应配置文件中加入以下别名（==以下示例仅在 Zsh 和 Bash 中验证，在 pwsh 中应该需要更改==），即可输入 `proxyon` 启用代理，输入 `proxyoff` 关闭代理：
+根据不同 Shell 在对应配置文件中加入以下别名（**以下示例仅在 Zsh 和 Bash 中验证，在 pwsh 中应该需要更改**），即可输入 `proxyon` 启用代理，输入 `proxyoff` 关闭代理：
 
 ```shell
 alias proxyon="

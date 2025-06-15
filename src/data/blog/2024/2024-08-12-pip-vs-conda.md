@@ -9,7 +9,7 @@ tags:
 description: "关于 pip 和 conda 的混合使用一直有所争议，正确做法是如何呢？"
 ---
 
-来自 [知乎用户 6dQvdv](https://www.zhihu.com/people/0c1136cff6f589da755a6903ce5faec7)（已销号）在 [工具篇：conda and pip](https://zhuanlan.zhihu.com/p/508506160)（==文章内容有误，注意甄别==）的评论：
+来自 [知乎用户 6dQvdv](https://www.zhihu.com/people/0c1136cff6f589da755a6903ce5faec7)（已销号）在 [工具篇：conda and pip](https://zhuanlan.zhihu.com/p/508506160)（**文章内容有误，注意甄别**）的评论：
 
 > 作者或许弄错了，在这里简单讨论一下：
 >

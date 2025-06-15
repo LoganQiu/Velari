@@ -6,7 +6,7 @@ category: Tech 技术
 tags:
   - git
 description: "具体分情况讨论如何在仓库中用 git 删除已进入版本控制的文件"
---- 
+---
 
 分两种情况讨论：
 

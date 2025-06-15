@@ -92,7 +92,7 @@ const nextPost =
   <BackButton />
 
   {hasSubHeadings && (
-  <!-- 移动端折叠式 TOC -->
+  <!-- mobile TOC -->
   <div class="toc-mobile xl:hidden mx-auto w-full max-w-4xl px-4 mb-6 mt-4">
     <details class="bg-background rounded-lg p-4 border">
       <summary class="cursor-pointer font-medium text-foreground">
@@ -103,8 +103,7 @@ const nextPost =
       </div>
     </details>
   </div>
-  <!-- 桌面端贴边 TOC -->
-
+  <!-- desktop TOC -->
   <div class="toc-desktop hidden xl:block fixed top-24 right-8 w-64 max-h-[calc(100vh-8rem)] overflow-y-auto z-10">
     <div class="bg-background border rounded-md p-4">
       <h3 class="text-sm font-semibold text-foreground mb-2 pb-2 border-b">
@@ -116,6 +115,7 @@ const nextPost =
     </div>
   </div>
   )}
+
   <main
     id="main-content"
     class:list={[

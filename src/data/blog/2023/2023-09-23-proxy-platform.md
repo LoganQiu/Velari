@@ -68,14 +68,14 @@ Meta 内核新特性出站连接支持：VLESS XTLS/Trojan XTLS/Hysteria
 
 仍然或重新开始正常更新的仓库（自然都使用 Clash.Meta 内核）：
 
-| 项目名称        | 开发者 & 网址                                                                         | 备注                                                                                         |
-| --------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| clash-nyanpasu  | [LibNyanpasu/clash-nyanpasu](https://github.com/LibNyanpasu/clash-nyanpasu)           | 基于 Clash.Meta & Clash-rs，由 Clash Verge 1.3.7 分支而来                                    |
+| 项目名称        | 开发者 & 网址                                                | 备注                                                         |
+| --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| clash-nyanpasu  | [LibNyanpasu/clash-nyanpasu](https://github.com/LibNyanpasu/clash-nyanpasu) | 基于 Clash.Meta & Clash-rs，由 Clash Verge 1.3.7 分支而来    |
 | Clash Verge Rev | [clash-verge-rev/clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev) | 明确表明是 [Clash Verge](https://github.com/zzzgydi/clash-verge) 的继任者（使用 Clash.Meta） |
-| ShellClash      | [juewuy/ShellClash](https://github.com/juewuy/ShellClash)                             | 重命名为 `ShellCrash` + 改用 Clash.Meta 和 sing-box                                          |
-| FlClash         | [chen08209/FlClash](https://github.com/chen08209/FlClash)                             |                                                                                              |
-| Mihomo Party    | [pompurin404/mihomo-party](https://github.com/pompurin404/mihomo-party)               |                                                                                              |
-| GUI.for.Clash   | [GUI-for-Cores/GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash)         |                                                                                              |
+| ShellClash      | [juewuy/ShellClash](https://github.com/juewuy/ShellClash)    | 重命名为 `ShellCrash` + 改用 Clash.Meta 和 sing-box          |
+| FlClash         | [chen08209/FlClash](https://github.com/chen08209/FlClash)    | 全平台嗷全平台（除了 iOS）                                   |
+| Mihomo Party    | [pompurin404/mihomo-party](https://github.com/pompurin404/mihomo-party) |                                                              |
+| GUI.for.Clash   | [GUI-for-Cores/GUI.for.Clash](https://github.com/GUI-for-Cores/GUI.for.Clash) |                                                              |
 
 ## sing-box
 
@@ -87,16 +87,16 @@ Meta 内核新特性出站连接支持：VLESS XTLS/Trojan XTLS/Hysteria
 
 官方并不赞成第三方项目使用 sing-box，此处仅作列表：
 
-| 项目名称               | 开发者 & 网址                                                                     | 备注                                                                    |
-| ---------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| NekoBox For Android    | [MatsuriDayo/NekoBoxForAndroid](https://github.com/MatsuriDayo/NekoBoxForAndroid) | 已停更                                                                  |
-| NekoBox For PC/nekoray | [MatsuriDayo/nekoray](https://github.com/MatsuriDayo/nekoray)                     | 不支持 Xray Core                                                        |
-| Hiddify                | [hiddify/hiddify-next](https://github.com/hiddify/hiddify-next)                   |                                                                         |
-| GUI.for.SingBox        | [GUI-for-Cores/GUI.for.SingBox](https://github.com/GUI-for-Cores/GUI.for.SingBox) |                                                                         |
-| Karing                 | [KaringX/karing](https://github.com/KaringX/karing)                               |                                                                         |
-| CatBoxForAndroid       | [AntiNeko/CatBoxForAndroid](https://github.com/AntiNeko/CatBoxForAndroid)         | 已删除，由 NekoBox For Android 分支                                     |
-| husi（虎兕）           | [xchacha20-poly1305/husi](https://github.com/xchacha20-poly1305/husi)             |                                                                         |
-| Exclave                | [dyhkwong/Exclave](https://github.com/dyhkwong/Exclave)                           | 由已存档项目 [SagerNet](https://github.com/SagerNet/SagerNet) fork 而来 |
+| 项目名称               | 开发者 & 网址                                                | 备注                                                         |
+| ---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| NekoBox For Android    | [MatsuriDayo/NekoBoxForAndroid](https://github.com/MatsuriDayo/NekoBoxForAndroid) |                                                              |
+| NekoBox For PC/nekoray | [MatsuriDayo/nekoray](https://github.com/MatsuriDayo/nekoray) | 已存档，不支持 Xray Core                                     |
+| Hiddify                | [hiddify/hiddify-next](https://github.com/hiddify/hiddify-next) |                                                              |
+| GUI.for.SingBox        | [GUI-for-Cores/GUI.for.SingBox](https://github.com/GUI-for-Cores/GUI.for.SingBox) |                                                              |
+| Karing                 | [KaringX/karing](https://github.com/KaringX/karing)          |                                                              |
+| CatBoxForAndroid       | [AntiNeko/CatBoxForAndroid](https://github.com/AntiNeko/CatBoxForAndroid) | 已删除，由 NekoBox For Android 分支                          |
+| husi（虎兕）           | [xchacha20-poly1305/husi](https://github.com/xchacha20-poly1305/husi) |                                                              |
+| Exclave                | [dyhkwong/Exclave](https://github.com/dyhkwong/Exclave)      | 由已存档项目 [SagerNet](https://github.com/SagerNet/SagerNet) fork 而来 |
 
 ## V2Ray
 

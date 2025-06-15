@@ -1,13 +1,12 @@
 ---
 const { headings } = Astro.props;
 
-// 判断传入的是数组还是单个对象
+// Determine whether the passed in array or single object
 const isHeadingsArray = Array.isArray(headings);
 let toc: any[] = [];
 let currentHeading = null;
 
 if (isHeadingsArray) {
-  // 构建TOC结构
   const parentHeadings = new Map();
   headings.forEach((h) => {
     const headingObj = { ...h, subheadings: [] };
@@ -20,13 +19,13 @@ if (isHeadingsArray) {
     }
   });
 } else {
-  // 单个heading对象
+  // single heading
   currentHeading = headings;
 }
 ---
 
 {isHeadingsArray ? (
-  <!-- 根组件：渲染整个TOC -->
+  <!-- Root component: renders the entire TOC -->
   <nav class="toc">
     <ul>
       {toc.map((h) => (
@@ -35,7 +34,7 @@ if (isHeadingsArray) {
     </ul>
   </nav>
 ) : (
-  <!-- 递归组件：渲染单个heading -->
+  <!-- Recursive component: rendering a single heading -->
   <li>
     <a href={'#' + currentHeading.slug}>
       {currentHeading.text}
@@ -51,11 +50,11 @@ if (isHeadingsArray) {
 )}
 
 <script>
-  // 定义一个变量，用于存储当前页面的清理函数
+  // Define a variable to store the cleanup function of the current page
   let cleanup: () => void;
 
   function initTOCHighlight() {
-    // 运行之前，先执行上一个页面的清理函数（如果存在）
+    // Before running, execute the cleanup function of the previous page (if it exists)
     if (cleanup) {
       cleanup();
     }
@@ -74,7 +73,7 @@ if (isHeadingsArray) {
 
     if (headings.length === 0 || tocLinksMap.size === 0) return;
 
-    // 使用一个变量来跟踪当前活动的链接，避免不必要的DOM操作
+    // Use a variable to keep track of the currently active link, avoiding unnecessary DOM manipulation
     let currentActiveLink: { classList: { remove: (arg0: string) => void; }; } | null = null;
 
     const observer = new IntersectionObserver((entries) => {
@@ -83,11 +82,11 @@ if (isHeadingsArray) {
         const link = tocLinksMap.get(id);
 
         if (entry.isIntersecting && entry.intersectionRatio >= 1) {
-          // 移除旧的 active 类
+          // Remove old active class
           if (currentActiveLink) {
             currentActiveLink.classList.remove('active');
           }
-          // 添加新的 active 类
+          // Add new active class
           link?.classList.add('active');
           currentActiveLink = link;
         }
@@ -99,18 +98,17 @@ if (isHeadingsArray) {
 
     headings.forEach(heading => observer.observe(heading));
 
-    // 将当前页面的清理逻辑赋值给 cleanup 变量
-    // 当下一个页面加载时，这个函数将被调用
+    // Assign the cleanup logic of the current page to the cleanup variable
+    // When the next page loads, this function will be called
     cleanup = () => {
       console.log('Cleaning up observers for the previous page.');
       headings.forEach(heading => observer.unobserve(heading));
-      // 或者更彻底地断开连接
+      // Or more completely disconnect
       // observer.disconnect();
     };
   }
 
-  // 关键改动：监听 astro:page-load 事件
-  // 这会确保在每次页面导航（包括首次加载）后都运行初始化函数
+  // Listening for the astro:page-load event
   document.addEventListener('astro:page-load', initTOCHighlight, { once: false });
 </script>
 
@@ -126,7 +124,6 @@ if (isHeadingsArray) {
     color: var(--color-accent);
   }
   
-  /* 当前活跃的heading样式 */
   .toc a.active {
     background-color: var(--color-muted);
   }

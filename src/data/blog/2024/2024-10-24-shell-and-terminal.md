@@ -120,7 +120,7 @@ Last login: Wed Oct  2 00:47:35 on ttys000
 
 ### 第三方终端
 
-| **终端**                                                     | **技术栈**  | **平台支持** | 特性                                               |
+|   终端                                                       |   技术栈    |   平台支持   | 特性                                               |
 | ------------------------------------------------------------ | ----------- | ------------ | -------------------------------------------------- |
 | [**Alacritty**](https://github.com/alacritty/alacritty)      | Rust        | 全平台       | 专注性能，无 GUI 配置，无 SSH 功能                 |
 | [**Ghostty**](https://github.com/ghostty-org/ghostty) 开发中 | Zig         | Linux/macOS  | 编写语言更接近底层，兼顾性能和功能                 |
@@ -163,7 +163,7 @@ Rust 规避了 C++ 项目的弊病，同时保证了良好的跨平台性质，�
 
 - 使用 `bat` 替换 `cat`
 - 使用 `bottom` 替换 `top` 和 `htop`
-- 使用 `du` 替换 `dust`
+- 使用 `dust` 替换 `du`
 - 使用 `fd` 替换 `find`
 - 使用 `gitui` 替换 `lazygit`
 - 使用 `eza` 或 `lsd` 替换 `ls` + `tree`

@@ -172,6 +172,9 @@ defaults write com.apple.finder QuitMenuItem -bool YES && killall Finder
 
 ## 开启或关闭 SIP
 
+> [!warning]
+> 务必请先了解什么是 SIP 且知晓关闭后会带来什么隐患再进行操作，并且仍然强烈不建议关闭 SIP。
+
 SIP 全称为 System Integrity Protection 即系统完整性保护，具体可见[官网介绍](https://support.apple.com/zh-cn/102149)。默认都是开启状态，若是有需求关闭后请记得及时重新开启。
 
 要开启或关闭此特性的步骤都是一样的，只是输入命令不同。
