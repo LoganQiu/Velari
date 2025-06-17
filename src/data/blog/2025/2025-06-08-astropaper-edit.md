@@ -18,7 +18,7 @@ description: "将原博客从 Hugo 搬迁至 Astro，并应用 AstroPaper 主题
 
 ## TOC 组件
 
-原主题中使用 remark 的官方插件 [remark-toc](https://github.com/remarkjs/remark-toc) 自动生成目录，再用第三方插件 [remark-collapse](https://github.com/Rokt33r/remark-collapse) 自动折叠，但是这样无法让读者实时知道在阅读哪个部分，所以还是重写了一个 TOC 组件。
+原主题中使用 remark 的官方插件 [remark-toc](https://github.com/remarkjs/remark-toc) 自动生成目录，再用第三方插件 [remark-collapse](https://github.com/Rokt33r/remark-collapse) 自动折叠，但是这样无法让读者实时知道在阅读哪个部分，所以还是用 **Claude** 重写了一个 TOC 组件。
 
 ### 组件部分
 
@@ -237,3 +237,9 @@ if (isHeadingsArray) {
 ```
 
 就是现在看到的目录了。
+
+> 等有空了还是希望按照 [KLD](https://github.com/kevinleedrum) 的教程：1）[Building a table of contents from Astro's markdown headings](https://kld.dev/building-table-of-contents/) 2）[Table of contents progress animation](https://kld.dev/toc-animation/) 来重新把 TOC 捣鼓的好看些。。。
+
+## 改用 Google Analytics 4 分析访问
+
+请参考博客 [Astro 接入 Google Analytics (Tag Manager)](https://shinya.click/fiddling/astro-google-tag-manager)。
