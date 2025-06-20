@@ -2,7 +2,7 @@
 title: "Windows 软件"
 slug: windows-softwares
 pubDatetime: 2024-01-03
-modDatetime: 2024-10-08
+modDatetime: 2025-06-21
 category: Tools 工具
 tags:
   - windows
@@ -94,11 +94,12 @@ description: "Windows 的软件管理策略以及好用的软件推荐"
   这是由微软社区开发且开源的强化windows体验的软件，功能丰富，包括但不限于“始终置顶”，“颜色选择器”，“File Locksmith（用于了解哪些进程正在使用所选文件和目录）”，“PowerRename（使用正则表达式进行高级批量重命名）”等等。后台挂载占用内存也很低完全可以常驻。
 
 - ~~[Fluent Search](https://www.fluentsearch.net/)~~  
-  （2024/11/02 删除：Fluent Search 更新迭代基本停滞，请切换至其他 Launcher）  
-  基于 C# 开发的全功能搜索软件（而且是 Fluent UI！！！），笔者认为其搜索能力与功能范围可以几乎替代 [Listary](https://www.listary.com/) 和 [everything](https://www.voidtools.com/zh-cn/) 这两款软件，当然，也强过 PowersToys Run 了。同时，工作流 Workflow 也是其一大特点，基于 C# 语法能完成各种任务。至于 [uTools](https://u.tools/) ，笔者不喜欢它的死板与繁杂，所有插件都以独立进程在后台挂载，而 [Quicker](https://getquicker.net) 确实很不错，如果读者感兴趣也是相当推荐尝试一下。
+  （2024/11/02 更新：Fluent Search 更新迭代基本停滞，请切换至其他 Launcher）  
+  （2025/06/21 更新：已经恢复更新并不知何时发布了 1.0 正式版本，但是与此同时 PowersToys 也推出了 Command Palette 也就是第二代 PowersToys Run，哪个顺手就用哪个吧）  
+  基于 C# 开发的全功能搜索软件（而且是 Fluent UI！），笔者认为其搜索能力与功能范围可以几乎替代 [Listary](https://www.listary.com/) 和 [everything](https://www.voidtools.com/zh-cn/) 这两款软件，当然，也强过 PowersToys Run 了。同时，工作流 Workflow 也是其一大特点，基于 C# 语法能完成各种任务。至于 [uTools](https://u.tools/) ，笔者不喜欢它的死板与繁杂，所有插件都以独立进程在后台挂载，而 [Quicker](https://getquicker.net) 确实很不错，如果读者感兴趣也是相当推荐尝试一下。
 
 - [Directory Opus](https://directory-opus.com/)（2024/02/16 添加）  
-  Windows 多功能文件资源管理器，功能繁多，非常强大，喜欢捣鼓软件的人不可错过的应用。
+  Windows 多功能文件资源管理器，功能繁多，非常强大，喜欢捣鼓软件的人不可错过的应用（但是有点丑，所以我没用）。
 
 - [Geek Uninstaller](https://geekuninstaller.com)（2024/03/01 添加）  
   一款免费轻量的强制删除应用的软件，包括不彻底地清除卸载时注册表残留。在此软件源代码基础上进行开发得到了 [Uninstall Tool](https://crystalidea.com/uninstall-tool)，虽然是收费（单次买断），但不得不承认功能强大，能够在安装应用时追踪创建的新文件以及修改的注册表，能够批量彻底删除顽固应用包括清理注册表，对电脑中 2345 全家桶、百度全家桶、360 全家桶、鲁大师、腾讯全家桶、金山全家桶（以上排名分先后）或有其它等流氓软件感到无从下手的人倾情推荐。
