@@ -117,3 +117,5 @@ Further help:
   自定义设置根据应用和网站切换输入法。
 - [CheatSheet](http://mediaatelier.com/LandingCheatSheet/)（2025/02/13 添加）  
   长按 <kbd> ⌘ </kbd> 会显示当前使用应用的所有快捷键，由 Media Atelier 制作，不过已经不再更新此软件同时从官网下架，推荐使用 Homebrew 下载。
+- [Syntax Highlight](https://github.com/sbarex/SourceCodeSyntaxHighlight)（2025/06/19 添加）  
+  macOS 最好用的功能之一便是按下空格可以快速预览文件，但是对于程序员来说各种代码文件或者配置文件无法预览多少有些麻烦，这个扩展可以出色地解决这个问题。
