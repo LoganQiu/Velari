@@ -89,7 +89,9 @@ Further help:
   常见的过滤规则：<https://ceadd.ca/blockyouxlist.txt>
 
 - [App Cleaner & Uninstaller](https://nektony.com/zh-hans/mac-app-cleaner)  
-  买断制付费软件，可以完全彻底地卸载应用。同类型应用有 [腾讯柠檬清理](https://lemon.qq.com/)（免费）和 [CleanMyMac X](https://macpaw.com/cleanmymac)（更贵且有评论称会误删文件）。
+  买断制付费软件，可以完全彻底地卸载应用。同类型应用有 [腾讯柠檬清理](https://lemon.qq.com/)（免费）和 [CleanMyMac X](https://macpaw.com/cleanmymac)（更贵且有评论称会误删文件）。  
+  [Pearcleaner](https://github.com/alienator88/Pearcleaner)（2025/06/28 添加）  
+  新发现的开源应用，好用！还能删除开发环境配置。需要注意的是删除应用后再删除相关文件时是否会有过于相近的名字而误删。
 
 - [iShot](https://better365.com/ishot.html)  
   好用省心的截图工具，Pro 版本也不贵。替代可选 [CleanShot X](https://cleanshot.com/)（Mac 上毋庸置疑最强的截图录屏类软件，大版本买断制）。
