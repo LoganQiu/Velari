@@ -121,3 +121,5 @@ Further help:
   长按 <kbd> ⌘ </kbd> 会显示当前使用应用的所有快捷键，由 Media Atelier 制作，不过已经不再更新此软件同时从官网下架，推荐使用 Homebrew 下载。
 - [Syntax Highlight](https://github.com/sbarex/SourceCodeSyntaxHighlight)（2025/06/19 添加）  
   macOS 最好用的功能之一便是按下空格可以快速预览文件，但是对于程序员来说各种代码文件或者配置文件无法预览多少有些麻烦，这个扩展可以出色地解决这个问题。
+- [RCDefaultApp](https://rubicode.com/Software/RCDefaultApp/) （2025/07/09 添加）  
+  可以批量设置默认应用。此软件最新更新在 2009 年，好在下载安装后基本还能正常使用。如果不介意使用命令行工具设置，还可以试试 [duti](https://github.com/moretension/duti)，不过也有个把年头不更新了。
