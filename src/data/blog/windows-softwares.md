@@ -148,7 +148,6 @@ description: "Windows 的软件管理策略以及好用的软件推荐"
 - [Keyviz](https://github.com/mulaRahul/keyviz)（2024/11/07 添加）  
   在屏幕上实时显示按下的键盘符号。
 
-
 > 通篇未包含 IObit 和 CCleaner 两家的任何软件，因为笔者已默认其为流氓软件与 2345 之流并无明显区别，然而其中其实也不乏能使用的软件（如 CC 的 Defraggler），本着宁可错杀不可放过原则，全部舍弃。
 
 ## JetBrains

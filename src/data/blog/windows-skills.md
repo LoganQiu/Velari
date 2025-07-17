@@ -167,6 +167,7 @@ WPS 此错误似乎已经得到修复（？存疑），只需将默认打开方�
 
    执行 `chcp 65001` 即可。  
    注：65001（utf-8）936（gbk）
+
 2. 永久修改
 
    进入注册表路径：`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor`  
@@ -256,6 +257,7 @@ netsh int tcp set supplemental template=Compat congestionprovider=BBR2
 
    注册表项 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem LongPathsEnabled (Type: REG_DWORD)` 必须存在并设置为 `1`。然后重启系统即可。  
    还可以在 `Computer Configuration > Administrative Templates > System > Filesystem > Enable Win32 long paths` 中通过 **组策略** 控制此注册表设置。
+
 2. 应用程序清单包含 `longPathAware` 元素
 
    此步骤一般应由开发者完成，即应用本身需支持长路径，具体内容可见 [应用程序清单](https://learn.microsoft.com/zh-cn/windows/win32/sbscs/application-manifests)，在 XML 文件中启用 `longPathAware` 属性。
@@ -267,9 +269,11 @@ netsh int tcp set supplemental template=Compat congestionprovider=BBR2
 - 释放静电：
 
   关机状态下，拔掉电源适配器，移除全部外接设备（包括电源适配器），按住电源键并保持 30 秒再松开，等待几秒插电源适配器，开机观察。
+
 - BIOS 硬重置：
 
   关机状态下，同时按 <kbd> win </kbd> + <kbd> V </kbd> 并保持按住的状态，按电源键开机，<kbd> win </kbd> + <kbd> V </kbd> 不要松开。等待一分钟，如果开机有显示，并提示 502 错误，就表示重置成功。之后如果原来是 UEFI 引导的系统，就可以直接进入系统。
+
 - 执行 BIOS Recovery：
 
   关机状态下，同时按 <kbd> win </kbd> + <kbd> B </kbd> 并保持按住的状态，按电源键开机，计算机通电 3 ~ 5 秒后松开。可以看到 <kbd> Caps Lock </kbd> 提示灯闪烁数次。如果 BIOS 恢复程序开始执行，会进入到 UEFI 的 BIOS 恢复界面，<kbd> Caps Lock </kbd> 提示灯会闪烁。BIOS 恢复一般不超过 5 分钟，屏幕会提示 BIOS 恢复成功。

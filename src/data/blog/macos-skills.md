@@ -26,7 +26,7 @@ description: "macOS 的各种隐藏功能指南以及针对一些反人类设计
 
 1. 允许 “任何来源” 下载的 App  
    终端输入 `sudo spctl --master-disable`  
-   设置完成后检查：*系统设置 --> 隐私与安全性 --> 安全性 --> 任何来源* 是否勾选。
+   设置完成后检查：**系统设置 --> 隐私与安全性 --> 安全性 --> 任何来源** 是否勾选。
 
 2. 移除应用的安全隔离属性  
    终端执行 `sudo xattr -dr com.apple.quarantine /Applications/name.app`  
@@ -160,13 +160,13 @@ defaults write com.apple.finder QuitMenuItem -bool YES && killall Finder
 
 下载暴雪战网后会在启动台出现两个战网图标，分别是 Battle.net 和 Agent，看着十分别扭，遂想删除 Agent。
 
-*原理*：macOS 使用 sqlite 来进行启动台以及小组件的管理。  
-*方法*：在终端中输入 `sqlite3 $(find /private/var/folders \( -name com.apple.dock.launchpad -a -user $USER \) 2> /dev/null)/db/db "DELETE FROM apps WHERE title='Appname';" && killall Dock`（其中的 Appname 记得改成实际应用的名字）。
+**原理**：macOS 使用 sqlite 来进行启动台以及小组件的管理。  
+**方法**：在终端中输入 `sqlite3 $(find /private/var/folders \( -name com.apple.dock.launchpad -a -user $USER \) 2> /dev/null)/db/db "DELETE FROM apps WHERE title='Appname';" && killall Dock`（其中的 Appname 记得改成实际应用的名字）。
 
 在 Steam 下载的游戏中有部分在启动台会直接显示 Steam 图标，有点膈应人，遂想修改一下。
 
-*原理*：修改对应游戏的快捷方式图标文件。  
-*方法*：进入对应游戏的文件夹（Finder 左侧 Applications 的路径为 `/Applications` 是没有游戏图标的，Steam 下载游戏的快捷方式在 `~/Applications`，右键查看包内容即可进入文件夹），用正确图标替换 `/Content/Resources/shortcut.icns` 即可（记得将图标重命名为 `shortcut.icns`）。也可以用游戏本身图标去替换，打开 Steam 找到下载路径，继续进入 `/steamapps/common` 找到对应游戏进入即可看到。
+**原理**：修改对应游戏的快捷方式图标文件。  
+**方法**：进入对应游戏的文件夹（Finder 左侧 Applications 的路径为 `/Applications` 是没有游戏图标的，Steam 下载游戏的快捷方式在 `~/Applications`，右键查看包内容即可进入文件夹），用正确图标替换 `/Content/Resources/shortcut.icns` 即可（记得将图标重命名为 `shortcut.icns`）。也可以用游戏本身图标去替换，打开 Steam 找到下载路径，继续进入 `/steamapps/common` 找到对应游戏进入即可看到。
 
 参考：[macOS 下修复 Steam 游戏图标](https://all2h.com/post/blog/ruan-ying-jian-zhe-teng/macosxia-geng-xin-steamyou-xi-tu-biao)
 
@@ -182,6 +182,7 @@ SIP 全称为 System Integrity Protection 即系统完整性保护，具体可�
 1. 进入恢复模式
 
    根据芯片类型不同方式也不一样：[M 系列芯片](https://support.apple.com/zh-cn/102518?type-of-mac=mac-with-apple-silicon)，[Intel 芯片](https://support.apple.com/zh-cn/102518?type-of-mac=intel-based-mac)。
+
 2. 打开终端
 
    开启：输入 `csrutil enable`  

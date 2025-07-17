@@ -50,7 +50,7 @@ A blockquote (a gray bar at the left and lightgray background):
 > dis parturient montes, nascetur ridiculus mus. Nulla sodales quam sit amet
 > tincidunt egestas. In et turpis at orci vestibulum ullamcorper. Aliquam sed
 > ante libero. Sed hendrerit arcu lacus.
-> 
+>
 > --- by Someone
 
 GitHub style alerts：
@@ -81,12 +81,10 @@ A full-width table:
 |          5.0 |         3.6 |          1.4 |         0.2 | setosa  | aaa |
 |          5.4 |         3.9 |          1.7 |         0.4 | setosa  | aaa |
 
-
 | 名称        | 描述       | 数量 |
 |:-----------|:----------:|-----:|
 | Item A     | 这是 Item A |   10 |
 | Item B     | 这是 Item B |    5 |
-
 
 An image:
 
@@ -111,7 +109,7 @@ ni $ a^*=x-b^* $ hao
 Definition list:
 
 Apple
-:   Pomaceous fruit of plants of the genus Malus in 
+:   Pomaceous fruit of plants of the genus Malus in
     the family Rosaceae.
 
 Orange

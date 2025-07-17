@@ -40,7 +40,7 @@ Example usage:
   brew upgrade [FORMULA|CASK...]
   brew uninstall FORMULA|CASK...
   brew list [FORMULA|CASK...]
-  
+ 
 Troubleshooting:
   brew config
   brew doctor
@@ -57,7 +57,7 @@ Further help:
   https://docs.brew.sh
 ```
 
-另外还有 `brew autoremove`（清理未使用的依赖），  `brew cleanup`（清理 Homebrew 缓存）。
+另外还有 `brew autoremove`（清理未使用的依赖），`brew cleanup`（清理 Homebrew 缓存）。
 
 不确定想要下载的应用是否正确？不用担心，只需先 `brew install --cask applite` 下载 Homebrew Casks 的可视化程序，可以在里面查看应用官网，甚至直接下载应用也可以。
 
