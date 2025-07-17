@@ -28,6 +28,7 @@ git push
 不要忘记在项目根目录下的 `.gitignore` 文件中添加 `.DS_Store`。
 
 > [!tip]
+>
 > 1. `git rm <file>` 用来删除 **[工作区+暂存区]** 的文件用。
 > 2. `git rm --cached <file>` 如果想 **仅删除暂存区** 里的文件可以用此命令，它不会删除工作区中的文件。
 > 3. 如果想删除 HEAD 仓库里的文件，好像没有专门的命令，只能 commit 作 log。具体操作是：rm → add → commit 或 git rm → commit。

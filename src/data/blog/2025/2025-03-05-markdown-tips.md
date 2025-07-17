@@ -49,6 +49,7 @@ description: "一些 Markdown 最佳实践和不常用的小技巧"
 这是第一段。  //有两个空格结尾
 这里换行了吗？
 ```
+
 输出：
 
 这是第一段。  
@@ -92,6 +93,7 @@ HTML 常用符号：
 Apple
 :   A kind of red fruit
 ```
+
 Apple
 :   A kind of red fruit
 

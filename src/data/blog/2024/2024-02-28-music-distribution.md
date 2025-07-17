@@ -29,7 +29,7 @@ description: "现代音乐发行作品集的类型介绍"
 - Split（拼盘）：多位音乐人的作品放入一张专辑，大多为同一类型音乐。
 - Bootleg（盗版录制）：未经官方授权的非法翻录唱片。
 
-## 参考：
+## 参考
 
 - [专辑，EP，单曲的区别是什么？ - Ianlie Dark 的回答 - 知乎](https://www.zhihu.com/question/22888388/answer/33255107)
 - [【掘音者】音乐专辑都有哪些分类？EP、Demo、B-Sides、Discography 这些词都是什么意思？ - 咕噜蛋 GuruDamn 的文章 - 知乎](https://zhuanlan.zhihu.com/p/443423127)

@@ -101,7 +101,7 @@ Last login: Wed Oct  2 00:47:35 on ttys000
 
 ## Shell 选择
 
-上面也提到了，Linux 默认 shell 为 Bash（Bourne Again Shell），而现在较新的 macOS 都使用 Zsh（Z Shell）。除此之外，还有最古老的始祖 sh（Bourne Shell），新兴的 Fish（the friendly interactive shell）。当然，这些 shell 在 Linux 和 macOS 上都可以使用，可以根据个人偏好选择。 
+上面也提到了，Linux 默认 shell 为 Bash（Bourne Again Shell），而现在较新的 macOS 都使用 Zsh（Z Shell）。除此之外，还有最古老的始祖 sh（Bourne Shell），新兴的 Fish（the friendly interactive shell）。当然，这些 shell 在 Linux 和 macOS 上都可以使用，可以根据个人偏好选择。
 
 在 Windows 中自带两个 shell，分别是 the Command shell 和 Windows PowerShell，前者更基础底层，后者更复杂强大。注意，现在 Windows 更推荐使用 PowerShell 7.x，由于 PowerShell core 基于 .NET 构建，所以跨平台通用，并且支持管道操作（不同于 Unix/Linux Shell 的文本传输，是更强大的对象传输）。
 

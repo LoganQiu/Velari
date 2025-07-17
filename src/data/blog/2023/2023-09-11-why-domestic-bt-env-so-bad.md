@@ -94,7 +94,7 @@ IPv4 16 倍的差距导致国内 IPv4 近二十年奇缺（IPv6 数量管够，�
 当然这些都不能起到决定性作用，前面说了，BT 下载速度取决于 **其他用户的上传速度**，因此用户越多越好，而用户靠 **Peer、DHT、Tracker** 获得。
 
 > **Peer**：获得一个有效用户后才会起作用，该用户会把它获得的用户信息告诉你。  
->  
+>
 > **DHT**：布式储存用户信息，获得一个用户后，会通过该用户获得更多的用户信息。缺点是需要养（下载热门资源）。
 
 Peer、DHT 我们做不了什么，但是 Tracker 大部分软件都支持自定义，所以如果你的 BT 软件支持自定义 Tracker，那么可以试试下面这个 **整合了全网热门 Tracker 的项目：**
@@ -161,8 +161,8 @@ BT 或者是 P2P 一切全靠自愿，这自然也少不了自私的人（当然
 
 ---
 
-我平时主要使用  **_[BitComet](https://pan.lanpw.com/b073c7g4f)、[qBittorrentEE](https://pan.lanpw.com/b073dnr7g)、[Motrix](https://motrix.app/)_**  搭配我整理的 **_[全网热门 Tracker](https://trackerslist.com/#/zh)_**。
+我平时主要使用  ***[BitComet](https://pan.lanpw.com/b073c7g4f)、[qBittorrentEE](https://pan.lanpw.com/b073dnr7g)、[Motrix](https://motrix.app/)***  搭配我整理的 ***[全网热门 Tracker](https://trackerslist.com/#/zh)***。
 
 > 如果上面的蓝奏云网盘地址 **打开为白屏**，则是 **广告屏蔽扩展** 的问题。
 
-有兴趣的可以点击上面链接下载试试（均已 **_屏蔽吸血迅雷_**、**_配置 Tracker_**）。
+有兴趣的可以点击上面链接下载试试（均已 ***屏蔽吸血迅雷***、***配置 Tracker***）。

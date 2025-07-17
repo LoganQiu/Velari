@@ -26,7 +26,7 @@ wsl --install
 <https://developer.nvidia.com/cuda-toolkit>
 
 > Q：为何需要单独安装 CUDA Toolkit?
-> 
+>
 > A：Anaconda 在安装 Pytorch 等会使用到 CUDA 的框架时，会自动为用户安装 CUDA Toolkit，其主要包含应用程序在使用 CUDA 相关的功能时所依赖的 **动态链接库**，不会安装驱动程序。在安装了 CUDA Toolkit 后，只要系统上存在与当前的 CUDA Toolkit 所兼容的 Nvidia 驱动，则已经编译好的 CUDA 相关的程序就可以直接运行，而不需要安装完整的 Nvidia 官方提供的 CUDA Toolkit。Nvidia 官方提供的 CUDA Toolkit 则是一个 **完整** 的工具安装包，包括 CUDA 程序的编译器、IDE、调试器等，CUDA 程序所对应的各式库文件以及它们的头文件。
 
 **注意下载版本选择！**
@@ -50,7 +50,6 @@ source ~/.bashrc
 ```
 
 此时执行
-
 
 ```shell
 nvcc -V
