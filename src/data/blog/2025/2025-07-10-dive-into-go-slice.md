@@ -180,5 +180,7 @@ var size_to_class128 = [(_MaxSmallSize-smallSizeMax)/largeSizeDiv + 1]uint8{32, 
 
 ## 参考
 
-- <https://jodezer.github.io/2017/05/golangSlice的扩容规则>
+- <https://go.dev/src/runtime/slice.go>
+- <https://go.dev/src/runtime/msize.go>
+- <https://go.dev/src/runtime/sizeclasses.go>
 - <https://www.jianshu.com/p/030aba2bff41>
