@@ -37,35 +37,39 @@ html[data-theme="dark"] {
     scrollbar-width: auto;
     scrollbar-color: var(--color-muted) transparent;
   }
-
   html {
     @apply overflow-y-scroll scroll-smooth;
   }
-
   body {
-    @apply flex min-h-svh flex-col bg-background font-sans text-foreground selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-background font-mono text-foreground selection:bg-accent/75 selection:text-background;
   }
-
   a,
   button {
     @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
   }
-
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
-
   section,
   footer {
-    @apply mx-auto max-w-4xl px-4;
+    @apply mx-auto max-w-app px-4;
   }
+}
+
+@utility max-w-app {
+  @apply max-w-3xl;
 }
 
 .active-nav {
   @apply underline decoration-wavy decoration-2 underline-offset-4;
 }
 
+/* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 1rem;
+}
 kbd {
   @apply inline-block items-center mr-1 text-foreground font-mono border rounded-md leading-4;
   @apply bg-white border-gray-300 shadow-[2px_2px_0px_0px_rgb(209,213,220)];
