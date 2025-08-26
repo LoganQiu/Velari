@@ -14,7 +14,7 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
-  --background: #212737;
+  --background: #0e1118;
   --foreground: #eaedf3;
   --accent: #ff6b01;
   --muted: #4c546c;
@@ -27,8 +27,8 @@ html[data-theme="dark"] {
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-border: var(--border);
-  --font-kaiti: 'SimKai', 'KaiTi SC', 'KaiTi', 'STKaiti', serif;
-  --font-song: 'Georgia', 'SimSun', 'Songti SC', 'Songti', 'STSong', serif;
+  --font-kaiti: "SimKai", "KaiTi SC", "KaiTi", "STKaiti", serif;
+  --font-song: "Georgia", "SimSun", "Songti SC", "Songti", "STSong", serif;
 }
 
 @layer base {
@@ -70,9 +70,10 @@ html[data-theme="dark"] {
 :target {
   scroll-margin-block: 1rem;
 }
+
 kbd {
-  @apply inline-block items-center mr-1 text-foreground font-mono border rounded-md leading-4;
-  @apply bg-white border-gray-300 shadow-[2px_2px_0px_0px_rgb(209,213,220)];
-  @apply dark:bg-black dark:border-gray-600 dark:shadow-[2px_2px_0px_0px_rgb(74,85,101)];
+  @apply mr-1 inline-block items-center rounded-md border font-mono leading-4 text-foreground;
+  @apply border-gray-300 bg-white shadow-[2px_2px_0px_0px_rgb(209,213,220)];
+  @apply dark:border-gray-600 dark:bg-black dark:shadow-[2px_2px_0px_0px_rgb(74,85,101)];
   @apply hover:relative hover:top-0.5 hover:left-0.5;
 }

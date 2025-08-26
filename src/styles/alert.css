@@ -1,56 +1,58 @@
-.prose .markdown-alert {
+.app-prose {
+  .markdown-alert {
     --color-note: #1f6feb;
     --color-caution: #da3633;
     --color-warning: #d29922;
     --color-important: #8957e5;
     --color-tip: #238636;
-}
+  }
 
-.prose .markdown-alert {
+  .markdown-alert {
     @apply border-l-4 mb-4 px-4 py-2;
-}
-.prose .markdown-alert>:first-child,
-.prose .markdown-alert>:last-child {
+  }
+  .markdown-alert>:first-child,
+  .markdown-alert>:last-child {
     @apply my-0;
-}
-.prose .markdown-alert .markdown-alert-title {
+  }
+  .markdown-alert .markdown-alert-title {
     @apply !mb-2 flex items-center font-sans font-medium leading-none;
-}
-.prose .markdown-alert svg.octicon {
+  }
+  .markdown-alert svg.octicon {
     @apply mr-2;
-}
+  }
 
-.prose .markdown-alert.markdown-alert-note {
+  .markdown-alert.markdown-alert-note {
     @apply border-l-(--color-note);
-}
-.prose .markdown-alert.markdown-alert-note .markdown-alert-title {
+  }
+  .markdown-alert.markdown-alert-note .markdown-alert-title {
     @apply text-(--color-note) fill-(--color-note);
-}
+  }
 
-.prose .markdown-alert.markdown-alert-tip {
+  .markdown-alert.markdown-alert-tip {
     @apply border-l-(--color-tip);
-}
-.prose .markdown-alert.markdown-alert-tip .markdown-alert-title {
+  }
+  .markdown-alert.markdown-alert-tip .markdown-alert-title {
     @apply text-(--color-tip) fill-(--color-tip);
-}
+  }
 
-.prose .markdown-alert.markdown-alert-important {
+  .markdown-alert.markdown-alert-important {
     @apply border-l-(--color-important);
-}
-.prose .markdown-alert.markdown-alert-important .markdown-alert-title {
+  }
+  .markdown-alert.markdown-alert-important .markdown-alert-title {
     @apply text-(--color-important) fill-(--color-important);
-}
+  }
 
-.prose .markdown-alert.markdown-alert-warning {
+  .markdown-alert.markdown-alert-warning {
     @apply border-l-(--color-warning);
-}
-.prose .markdown-alert.markdown-alert-warning .markdown-alert-title {
+  }
+  .markdown-alert.markdown-alert-warning .markdown-alert-title {
     @apply text-(--color-warning) fill-(--color-warning);
-}
+  }
 
-.prose .markdown-alert.markdown-alert-caution {
+  .markdown-alert.markdown-alert-caution {
     @apply border-l-(--color-caution);
-}
-.prose .markdown-alert.markdown-alert-caution .markdown-alert-title {
+  }
+  .markdown-alert.markdown-alert-caution .markdown-alert-title {
     @apply text-(--color-caution) fill-(--color-caution);
+  }
 }
